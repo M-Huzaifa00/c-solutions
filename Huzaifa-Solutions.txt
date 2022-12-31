@@ -1,0 +1,242 @@
+Day 1-Proglems;
+/*
+ * Write and execute a C program that calculates and display that area of
+ * a rectangle that has a width of 3.5 inches and a length of 5.48 inches.
+ * The relevant formula is area = length * width. Use the variable names
+ * length, width, and area in your program.
+ * 
+ * Additional! 
+ * The program must also compute and display the perimeter of the rectangle.
+ * The relevant formula is perimeter = 2(length + width).
+ */?
+Solution:
+#include<iostream>
+#include<iomanip>
+using namespace std;
+void areaOfRectangle(float len,float width){
+	float area = len * width;
+	cout<<"The Area of Rectangle of Height:"<<len<<" and width:"<<width<<" is:"<<area<<endl;
+	float parimeter = 2*(len*width);
+	cout<<"Additionally the Perimeter of that rectangle is:"<<parimeter;
+}
+
+int main(){
+	//Huzaifa
+	float length,width;
+	cout<<"Enter length and width of rectangle in inches:";
+	cin>>length>>width;
+	areaOfRectangle(length,width);
+	
+	return 0;
+}
+
+2:/*
+ * Write and execute a C program that calculates and display the area of a circle
+ * with a radius of 2.57 inches. The relevant formula is circumference = pi * radius^2,
+ * where pi is the value 3.1416. Use the variable names radius and circumference in 
+ * your program.
+ */?
+Solution:
+#include<iostream>
+#include<iomanip>
+#include<math.h>
+using namespace std;
+void areaOfCircle(float radius){
+	float area = 3.1416*pow(radius,2);
+	cout<<"The Area of circle with radius:"<<radius<<" is:"<<area;
+}
+int main(){
+	//Huzaifa
+	float radius;
+	cout<<"Enter the radius of the circle in inches:";
+	cin>>radius;
+	areaOfCircle(radius);
+	
+	
+	return 0;
+}
+
+3:/*
+ * NOTE(nick): problem one description
+ * Write and execute a C program that calculates and displays the circumference of a
+ * circle that has a radius 2.57 inches. The relevant formula is circumference = (2 pi) radius,
+ * where pi is the value 3.1416. Use the variable names radius and circumference in your
+ * program.
+ */?
+#include<iostream>
+#include<iomanip>
+#include<math.h>
+using namespace std;
+void areaOfCircle(float radius){
+	float area = 2*3.1416*radius;
+	cout<<"The Circumference of circle with radius:"<<radius<<" is:"<<area;
+}
+int main(){
+	//Huzaifa
+	float radius;
+	cout<<"Enter the radius of the circle in inches:";
+	cin>>radius;
+	areaOfCircle(radius);
+	
+	
+	return 0;
+}
+
+4:/*
+ * 	Write and execute a C program that calculates and displays the number
+ *	of minutes in a year?
+ */
+Solution:
+#include<iostream>
+#include<iomanip>
+#include<math.h>
+using namespace std;
+void yearMinuteFinder(float days){
+	float hours = days*24;
+	cout<<"1-Year has:"<<hours<<" total hours"<<endl;
+	float minutes = hours*60;
+	cout<<"Total minutes in :"<<days<<" is:"<<minutes;
+}
+int main(){
+	//Huzaifa
+	float days;
+	cout<<"Enter the days of years to calculate total minutes upto now:";
+	cin>>days;
+	yearMinuteFinder(days);
+	
+	
+	return 0;
+}
+
+5:/*
+ * You purchase a laptop computer $889. The sales tax rate is
+ * 6 percent. Write and execute a C program that calculates and
+ * displays the total purchase price.
+ */?
+solution:
+#include<iostream>
+#include<iomanip>
+#include<math.h>
+using namespace std;
+void billCalculator(float price){
+	float bill = price*6/100;
+	cout<<"The final bill after 6% of sale tax is:"<<bill+price<<"$"<<" we add "<<bill<<" sale tax in you bill";
+}
+int main(){
+	//Huzaifa
+	float price;
+	cout<<"Enter the price of laptop in $ to calculate total-Bill:";
+	cin>>price;
+	billCalculator(price);
+	
+	
+	return 0;
+}
+
+6:/*
+ * Write a C program that stores the integer value 15 in a variable named num1
+ * and the integer value 18 in the variable num2. (Make sure to declare these
+ * two variables as integers.) Have your program calculate the total of these
+ * numbers and their average. The total should be stored in the variable named
+ * total and the average in the variable named average. (Use the statement
+ * average = total / 2.0; to calculate the average.) Use the printf() function
+ * to display the total and average.
+ */?
+solution:
+#include<iostream>
+#include<iomanip>
+#include<math.h>
+using namespace std;
+void avg(int n1,int n2){
+	float total = n1 + n2;
+	float avg = total/2;
+	cout<<"Avg of these nums("<<n1<<","<<n2<<") is:"<<avg<<"%";
+}
+int main(){
+	//Huzaifa
+    int num1,num2;
+	cout<<"Enter 2 numbs to find their average:";
+	cin>>num1>>num2;
+	avg(num1,num2);
+}
+
+7:/*
+ * Make a program that converts 86.5 degrees Fahrenheit into
+ * its equivalent Celsius value
+ */?
+Solution:
+#include<iostream>
+#include<iomanip>
+#include<math.h>
+using namespace std;
+void celcius(int temp){
+	float celcius = (temp-32)*5/9;
+	cout<<temp<<" Fahrenhiet to celcius is:"<<celcius;
+}
+int main(){
+	//Huzaifa
+    int temp;
+	cout<<"Enter temprature in Fahrenhiet:";
+	cin>>temp;
+    celcius(temp);
+}
+
+8:/*
+ * In 1995, the Brooklyn Dodgers baseball team won 98 games and lost 55.
+ * Using this information write, compile, and execute a C program that
+ * calculates and displays the team's winning percentage for 1955.
+ */?
+solution:
+#include<iostream>
+#include<iomanip>
+#include<math.h>
+using namespace std;
+void winningCalculator(float win,float lost){
+	float totalMatches = win + lost;
+	float winningPercentage = (win/totalMatches)*100;
+	cout<<"winning-Percentage becomes:"<<winningPercentage<<"%"<<endl;
+	float lostPercentage = (lost/totalMatches)*100;
+	cout<<"Loosing-Percentage is:"<<lostPercentage<<"%";
+}
+int main(){
+	//Huzaifa
+    float win,lost;
+	cout<<"Enter number of matches team won and lost:";
+	cin>>win>>lost;
+	winningCalculator(win,lost);
+
+}
+
+9:/*
+ * The distance that light travels in one year is called a light year.
+ * Given that light travles at a speed of 3 * 108 meters in one second,
+ * determine the distance of a light year. The relevant formula is 
+ * distance = speed * time.
+ */?
+solution:
+#include<iostream>
+#include<iomanip>
+#include<math.h>
+using namespace std;
+long time(int year){
+	long days = 365*year;
+	long hours = 24*days;
+	long minutes = 60*hours;
+	long seconds = 60*minutes;
+	return seconds;
+}
+long distanceLightYear(long time){
+	long Distance = 3 * time;
+	return Distance;
+}
+
+int main(){
+	//Huzaifa
+    int years;
+	cout<<"Enter year to find how much distance light travled in thats years:";
+	cin>>years;
+	long sec = time(years);
+	cout<<"Distance traveled by light in "<<years<<" is:"<<distanceLightYear(sec);
+}
+
+
